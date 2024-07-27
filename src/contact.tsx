@@ -27,7 +27,7 @@ window.addEventListener("scroll", () => {
         <div className="contact_div" id="contact">
           <a id="contact_section"></a>
           <div className="d-flex justify-content-center">
-            <h1 className="contact_text">Lets discuss</h1>
+            <h1 className="line_hi">Lets discuss</h1>
           </div>
 
           <div className="big_contact">

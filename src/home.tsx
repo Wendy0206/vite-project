@@ -43,6 +43,7 @@ export const Home = () => {
       ".line_hi"
     ) as NodeListOf<HTMLElement>;
     const submit = document.querySelector(".submit-btn") as HTMLElement | null;
+      const resume = document.querySelector(".resume_button") as HTMLElement | null;
     const footerYear = document.querySelector(
       ".footer_text"
     ) as HTMLElement | null;
@@ -58,7 +59,7 @@ export const Home = () => {
       hiLine &&
       submit &&
       footerYear &&
-      dark
+      dark && resume
     ) {
       if (currentMode.current === 0) {
         dark.classList.remove("fa-moon");
@@ -70,16 +71,14 @@ export const Home = () => {
         footerS.style.backgroundColor = "rgba(33, 96, 47, 0.51)";
         submit.style.backgroundColor = "rgba(33, 96, 47, 0.51)";
         footerYear.style.color = "black";
+         resume.style.color = "white";
         container.classList.toggle("dark_mode");
 
         awesome.forEach((element) => {
           element.style.color = "black";
         });
 
-        hiLine.forEach((element) => {
-          element.style.color = "black";
-        });
-
+    
         social.forEach((element) => {
           element.style.color = "black";
         });
@@ -87,6 +86,8 @@ export const Home = () => {
            inputBg.forEach((element) => {
           element.style.backgroundColor = "rgba(33, 96, 47, 0.51)";
         });
+
+  hiLine.forEach((elm) => (elm.style.color = "white"));
 
         currentMode.current = 1;
       } else {
@@ -98,11 +99,12 @@ export const Home = () => {
         footerS.style.backgroundColor = "#1a261d";
         submit.style.backgroundColor = "#1a261d";
         footerYear.style.color = "white";
+         resume.style.color = "black";
         container.classList.toggle("dark_mode");
         social.forEach((elm) => (elm.style.color = "white"));
-        hiLine.forEach((elm) => (elm.style.color = "white"));
+      
+       hiLine.forEach((element) => { element.style.color = "black";});
 
-   
   inputBg.forEach((element) => {
           element.style.backgroundColor = "#2d2d2d";
         });
@@ -111,7 +113,7 @@ export const Home = () => {
           element.style.color = "white";
         });
 
-        document.documentElement.style.setProperty("--color", "white");
+      //  document.documentElement.style.setProperty("--color", "white");
         currentMode.current = 0;
       }
     }

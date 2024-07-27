@@ -2,8 +2,21 @@ import { useRef } from 'react'
 import './App.css'
 
 function Contact() {
-window.addEventListener("scroll", () => {
 
+const send_message =(): void=>{
+     const comment = document.querySelector(".comment_in") as HTMLInputElement | null;
+    const phone = document.querySelector(".phone_in")  as HTMLInputElement | null;
+    const email = document.querySelector(".email_in")  as HTMLInputElement | null;
+if(comment && phone && email){
+    comment.value='';
+  phone.value='';
+  email.value='';
+}
+
+}
+
+
+window.addEventListener("scroll", () => {
   const reveals = document.querySelectorAll(".reveal") as NodeListOf<HTMLElement>;
 
   // Get the total height of the document
@@ -31,7 +44,7 @@ window.addEventListener("scroll", () => {
           </div>
 
           <div className="big_contact">
-            <form >
+            <form onSubmit={()=>{return false;}}>
               <div className="styled-input style reveal fade-left">
                 <input type="email" required className=" input_class email_in" />
 
@@ -49,7 +62,7 @@ window.addEventListener("scroll", () => {
                 <label>Message</label>
               </div>
 
-              <button className="btn-lrg submit-btn" >Send Message</button>
+              <button className="btn-lrg submit-btn" onClick={()=>send_message()} >Send Message</button>
             </form>
           </div>
 

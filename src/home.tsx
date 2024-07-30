@@ -131,7 +131,7 @@ export const Home = () => {
         <h1 className="header_style header_shake">Donley</h1>
         <div className="d-flex">
           <h1 className="header_style text-light">Pierre</h1>
-          <h1 className="header_style slide_out">&gt;</h1>
+          <h1 className="header_style slide_out">/&gt;</h1>
         </div>
       </div>
 

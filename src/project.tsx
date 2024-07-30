@@ -6,10 +6,76 @@ import mediaPlayer from './assets/mediaPlayer.png'
 import checkers from './assets/checkers.png'
 import phi from './assets/phi.png'
 
-
+import {useState} from 'react'
 
 
 export const Project = () => {
+
+
+// interface eachProject {
+//   codeLink: string;
+//   title: string;
+//   projectLink: string;
+//   description: string;
+//   skills: string;
+//   img_url: string;
+// }
+
+// const [projectObj, setProjectObj] = useState<eachProject[]>([
+//   {
+//     codeLink: 'https://github.com/Wendy0206/Wendy_DYGeek_Project',
+//     img_url: './assets/DyGeek.png',
+//     title: 'Dygeek',
+//     projectLink: 'https://dygeek.netlify.app/',
+//     description: 'Marvel and Pop Culture fan can look up series, comics and events of their favorite characters.',
+//     skills: 'React JS REST API Marvel Api Firebase'
+//   },
+//   {
+//     codeLink: 'https://phihaiti.com/',
+//      img_url: './assets/phi.png',
+//     title: 'PHI Wellness',
+//     projectLink: 'https://phihaiti.com/',
+//     description: 'A CRM designed for their daily activities. Create orders, Refund, and other processing.',
+//     skills: 'React Php JavaScript Mysql'
+//   },
+//     {
+//     codeLink: 'https://github.com/Wendy0206/Spotless_Project_Wendy_Chris',
+//      img_url: './assets/spotless.png',
+//     title: 'Spotless',
+//     projectLink: 'https://github.com/Wendy0206/Spotless_Project_Wendy_Chris',
+//     description: 'A on demand cleaning service app that connects homeowner and Airbnb Host with Gig Worker.',
+//     skills: 'React  JS  Flask Sql  Alchemy Context API JWT'
+//   },
+//   {
+//     codeLink: 'https://github.com/Wendy0206/Wendy_checkers_Game',
+//      img_url: './assets/checkers.png',
+//     title: 'CHeckers game',
+//     projectLink: 'https://checkersbywendy.netlify.app/',
+//     description: 'A simple react app to enjoy with your partner or by yourself.',
+//     skills: 'React JavaScript '
+//   },
+//    {
+//     codeLink: 'https://github.com/Wendy0206/wendy_media_api',
+//      img_url: './assets/mediaPlayer.png',
+//     title: 'Audio Streaming',
+//     projectLink: 'https://mediaplayerbywendy.vercel.app/',
+//     description: 'A simple Music streaming app.',
+//     skills: 'React  JavaScript'
+//   }, 
+//   {
+//     codeLink: 'https://github.com/Wendy0206/wendy_country_quiz',
+//      img_url: './assets/countryquiz.png',
+//     title: 'Country Quiz',
+//     projectLink: 'https://countryquizbywendy.vercel.app/',
+//     description: 'How well do you know history, would you recognize those flags? Try and tell me.',
+//     skills: 'React  JavaScript'
+//   }
+
+// ]);
+
+
+
+
 const show_code= (id : number): void =>{
 //const imageHover = document.querySelectorAll(".project_img_div") as NodeListOf<HTMLElement>;
 const showInfo = document.querySelectorAll(".project_info_div") as NodeListOf<HTMLElement>;
@@ -102,8 +168,12 @@ showInfo[id].classList.add("show_project_info");
                 <h5>Mysql</h5>
               </div>
             </div>
-            {/* // Project # 3 ends below */}
+            {/* // Project # 1 ends below */}
           </div>
+
+
+
+
           <div className="project_card_div">
             <div className="project_img_div" onMouseOver={()=>show_code(2)}>
               <img

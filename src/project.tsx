@@ -6,7 +6,6 @@ import mediaPlayer from './assets/mediaPlayer.png'
 import checkers from './assets/checkers.png'
 import phi from './assets/phi.png'
 
-import {useState} from 'react'
 
 
 export const Project = () => {

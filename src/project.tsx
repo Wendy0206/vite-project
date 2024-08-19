@@ -171,8 +171,6 @@ showInfo[id].classList.add("show_project_info");
           </div>
 
 
-
-
           <div className="project_card_div">
             <div className="project_img_div" onMouseOver={()=>show_code(2)}>
               <img

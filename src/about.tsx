@@ -4,14 +4,18 @@ import './App.css'
 export const About=()=> {
 
  useEffect(()=>{
-generate_bg();
+launch_bg();
  },[])
 
 
- useEffect(()=>{
-setTimeout(pop_function(), 4000)
- },[])
+//  useEffect(()=>{
+// setTimeout(pop_function(), 4000)
+//  },[])
 
+const launch_bg= async()=>{
+  await generate_bg();
+  pop_function();
+}
 
 
 let interval :number;
@@ -94,7 +98,7 @@ let interval :number;
     " fa-brands fa-quinscape fa-bounce  fa-fade",
     " fa-solid fa-bug  fa-fade",
     " fa-solid fa-share-nodes",
-       " fa-solid fa-code-commit fa-fade",
+    " fa-solid fa-code-commit fa-fade",
     " fa-brands fa-codepen fa-fade",
     " fa-brands fa-github fa-fade",
     " fa-brands fa-react fa-fade",
@@ -118,7 +122,7 @@ let interval :number;
     ];
 
   
-const generate_bg = (): void => {
+const generate_bg = async(): Promise<boolean> => {
   const get_left_side = document.querySelector('.about_left_div') as HTMLElement | null;
   
   // Ensure get_left_side is not null
@@ -136,6 +140,8 @@ const generate_bg = (): void => {
 
 
   }
+
+  return true;
 };
 
 type ClearIntervalFunction = () => void;
@@ -143,6 +149,7 @@ const pop_function = (): ClearIntervalFunction => {
 
   interval = setInterval(() => {
     remove_highlight();
+   // console.log('we pop something just now');
 
     const id_div = '.B' + Math.floor(Math.random() * 99);
     const get_spot = document.querySelector(id_div + '>i') as HTMLElement | null;

@@ -47,6 +47,9 @@ export const Home = () => {
     const footerYear = document.querySelector(
       ".footer_text"
     ) as HTMLElement | null;
+     const social_l = document.querySelectorAll(
+      ".social_size"
+    )  as NodeListOf<HTMLElement>;
 
     if (
       homeLeft &&
@@ -59,7 +62,7 @@ export const Home = () => {
       hiLine &&
       submit &&
       footerYear &&
-      dark && resume
+      dark && resume && social_l
     ) {
 
       if (currentMode.current === 0) {
@@ -73,6 +76,9 @@ export const Home = () => {
         submit.style.backgroundColor = "rgba(33, 96, 47, 0.51)";
        
          resume.style.color = "white";
+        social_l[0].style.color = "white";
+         social_l[1].style.color = "white";
+          social_l[2].style.color = "white";
         container.classList.toggle("dark_mode");
 
         awesome.forEach((element) => {
@@ -96,7 +102,9 @@ export const Home = () => {
         dark.classList.remove("text-light");
         dark.classList.add("fa-moon");
        
-      
+       social_l[0].style.color = "black";
+        social_l[1].style.color = "black";
+         social_l[2].style.color = "black";
         submit.style.backgroundColor = "#1a261d";
       
          resume.style.color = "black";

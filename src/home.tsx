@@ -61,6 +61,7 @@ export const Home = () => {
       footerYear &&
       dark && resume
     ) {
+
       if (currentMode.current === 0) {
         dark.classList.remove("fa-moon");
         dark.classList.add("text-light");
@@ -70,7 +71,7 @@ export const Home = () => {
         project[1].style.backgroundColor = "rgba(33, 96, 47, 0.51)";
         footerS.style.backgroundColor = "rgba(33, 96, 47, 0.51)";
         submit.style.backgroundColor = "rgba(33, 96, 47, 0.51)";
-        footerYear.style.color = "black";
+       
          resume.style.color = "white";
         container.classList.toggle("dark_mode");
 
@@ -94,11 +95,10 @@ export const Home = () => {
         dark.classList.remove("fa-sun");
         dark.classList.remove("text-light");
         dark.classList.add("fa-moon");
-        project[0].style.backgroundColor = "#1a261d";
-        project[1].style.backgroundColor = "#1a261d";
-        footerS.style.backgroundColor = "#1a261d";
+       
+      
         submit.style.backgroundColor = "#1a261d";
-        footerYear.style.color = "white";
+      
          resume.style.color = "black";
         container.classList.toggle("dark_mode");
         social.forEach((elm) => (elm.style.color = "white"));

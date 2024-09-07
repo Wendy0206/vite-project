@@ -26,7 +26,7 @@ const [projectObj] = useState<eachProject[]>([
     img_url: DyGeek,
     title: 'Dygeek',
     projectLink: 'https://dygeek.netlify.app/',
-    description: 'Marvel and Pop Culture fan can look up series, comics and events of their favorite characters.',
+    description: 'Marvel fan can look up series, comics and events of their favorite characters.',
     skills: 'React JS REST API Marvel Api Firebase'
   },
   {
@@ -69,7 +69,7 @@ const [otherProject] = useState<eachProject[]>([
      img_url: countryquiz,
     title: 'Country Quiz',
     projectLink: 'https://countryquizbywendy.vercel.app/',
-    description: 'How well do you know history, would you recognize those flags? Try and tell me.',
+    description: 'How well do you know history, would you recognize those flags?',
     skills: 'React  JavaScript'
   }
 ]);
